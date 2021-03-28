@@ -1,5 +1,5 @@
-import { DataMapper } from "@aws/dynamodb-data-mapper";
-import * as DynamoDB from "aws-sdk/clients/dynamodb";
+import { DataMapper } from '@aws/dynamodb-data-mapper';
+import DynamoDB from 'aws-sdk/clients/dynamodb';
 
 const dynamoDB: DynamoDB = process.env.IS_OFFLINE
   ? new DynamoDB({
