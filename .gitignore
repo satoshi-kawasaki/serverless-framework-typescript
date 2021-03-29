@@ -8,10 +8,7 @@
 *.tar.gz
 *.rar
 
-package-lock.json
-
 hs_err_pid*
-node_modules
 node_modules/
 .dynamodb/
 .webpack/
