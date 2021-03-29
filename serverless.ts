@@ -1,4 +1,9 @@
-import { hello, montecarlo, montecarloInversify } from "./src/functions";
+import {
+  hello,
+  montecarlo,
+  montecarloInversify,
+  montecarloTSyringe,
+} from "./src/functions";
 
 import type { AWS } from "@serverless/typescript";
 
@@ -73,7 +78,7 @@ const serverlessConfiguration: AWS = {
     },
     lambdaHashingVersion: "20201221",
   },
-  functions: { hello, montecarlo, montecarloInversify },
+  functions: { hello, montecarlo, montecarloInversify, montecarloTSyringe },
 };
 
 module.exports = serverlessConfiguration;
