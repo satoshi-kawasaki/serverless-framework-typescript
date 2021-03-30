@@ -11,12 +11,10 @@ export interface MontecarloInversifyFacede {
 @injectable()
 export class MontecarloInversifyFacedeImpl
   implements MontecarloInversifyFacede {
-  constructor(
-    @inject(TYPES.MontecarloInversifyDomain)
-    private readonly montecarloInversifyDomain: MontecarloInversifyDomain,
-    @inject(TYPES.MontecarloInversifyRepository)
-    private readonly montecarloInversifyRepository: MontecarloInversifyRepository
-  ) {}
+  @inject(TYPES.MontecarloInversifyDomain)
+  private readonly montecarloInversifyDomain: MontecarloInversifyDomain;
+  @inject(TYPES.MontecarloInversifyRepository)
+  private readonly montecarloInversifyRepository: MontecarloInversifyRepository;
   async execute(): Promise<void> {
     const result: number = await this.montecarloInversifyDomain.calculation();
     await this.montecarloInversifyRepository.regist(result);
