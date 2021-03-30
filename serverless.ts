@@ -77,6 +77,13 @@ const serverlessConfiguration: AWS = {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
     },
     lambdaHashingVersion: "20201221",
+    iamRoleStatements: [
+      {
+        Effect: "Allow",
+        Action: ["dynamodb:PutItem", "dynamodb:Scan"],
+        Resource: "*",
+      },
+    ],
   },
   functions: { hello, montecarlo, montecarloInversify, montecarloTSyringe },
 };
